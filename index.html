@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/29279/Desktop/izu_weekend_drive_magazine_webpage.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>看海路 · 伊豆｜两天一夜自驾杂志页</title>
+  <meta name="description" content="看海路 · 伊豆：两天一夜自驾，MOA美术馆、伊豆海洋公园、城ヶ崎海岸、河津樱、大室山烧山、伊豆仙人掌动物公园。">
+
+  <!-- Optional: typefaces (safe to remove if you prefer system fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./izu_weekend_drive_magazine_webpage_files/css2" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fbfaf7;
+      --paper:#ffffff;
+      --ink:#111111;
+      --muted:#5b5b5b;
+      --line:#e9e5dd;
+      --shadow: 0 18px 60px rgba(0,0,0,.08);
+      --radius: 22px;
+      --serif: "Noto Serif SC", ui-serif, Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --max: 1040px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(0,0,0,.03), transparent 60%),
+                  radial-gradient(900px 500px at 80% 10%, rgba(0,0,0,.035), transparent 55%),
+                  var(--bg);
+      color:var(--ink);
+      font-family: var(--sans);
+      letter-spacing: .2px;
+    }
+
+    a{ color:inherit; text-decoration: none; }
+
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 28px 18px 64px; }
+
+    /* Top bar */
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+      padding: 10px 0 18px;
+    }
+    .brand{
+      display:flex; align-items:baseline; gap:10px;
+      font-family: var(--serif);
+    }
+    .brand .kicker{ font-size:12px; letter-spacing: .22em; text-transform:uppercase; color:var(--muted); }
+    .brand .title{ font-size:18px; font-weight:700; }
+
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; }
+    .chip{
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      padding:8px 10px; border-radius: 999px;
+      background: rgba(255,255,255,.55);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Hero */
+    .hero{
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .9fr;
+      min-height: 420px;
+    }
+    .heroMedia{ position:relative; }
+    .heroMedia img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .heroMedia::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, rgba(0,0,0,.18), transparent 55%),
+                  linear-gradient(180deg, transparent 55%, rgba(0,0,0,.14));
+      pointer-events:none;
+    }
+
+    .heroCopy{ padding: 34px 30px 28px; display:flex; flex-direction:column; justify-content:space-between; gap:18px; }
+    .heroTitle{
+      font-family: var(--serif);
+      font-size: 44px;
+      line-height: 1.06;
+      margin:0;
+      letter-spacing: -0.02em;
+    }
+    .heroSubtitle{ margin:10px 0 0; color:var(--muted); font-size: 14px; line-height: 1.7; }
+
+    .heroMeta{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .metaItem{ padding:10px 12px; border:1px solid var(--line); border-radius: 14px; background: rgba(0,0,0,.02); }
+    .metaItem .label{ font-size:11px; color:var(--muted); letter-spacing:.18em; text-transform:uppercase; }
+    .metaItem .value{ margin-top:6px; font-size:13px; line-height:1.4; }
+
+    /* Layout sections */
+    .section{
+      margin-top: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .sectionHeader{
+      padding: 22px 26px;
+      display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(0,0,0,.02), transparent);
+    }
+    .sectionHeader h2{
+      margin:0;
+      font-family: var(--serif);
+      font-size: 20px;
+      letter-spacing: .02em;
+    }
+    .sectionHeader .desc{ margin:0; color:var(--muted); font-size:13px; }
+
+    .content{ padding: 22px 22px 26px; }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .card{
+      grid-column: span 6;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow:hidden;
+      background: #fff;
+      display:flex;
+      flex-direction:column;
+      min-height: 320px;
+    }
+    .cardMedia{ height: 180px; position:relative; }
+    .cardMedia img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .cardBody{ padding: 16px 16px 18px; display:flex; flex-direction:column; gap:10px; }
+
+    .kicker{
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .cardTitle{
+      margin:0;
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.25;
+    }
+    .lede{ margin:0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+
+    .facts{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top: 4px;
+    }
+    .fact{
+      font-size:12px;
+      padding: 7px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.02);
+      color: var(--muted);
+    }
+
+    .wide{ grid-column: span 12; }
+    .card.wide{ min-height: 0; }
+
+    /* Timeline */
+    .timeline{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .tRow{
+      display:grid;
+      grid-template-columns: 110px 1fr;
+      gap: 12px;
+      padding: 14px 16px;
+      border-top: 1px solid var(--line);
+    }
+    .tRow:first-child{ border-top:none; }
+    .tTime{ font-family: var(--serif); font-weight:700; font-size: 14px; }
+    .tText{ color: var(--muted); font-size: 13px; line-height:1.6; }
+
+    /* Notes */
+    .notes{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .note{
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      background: #fff;
+    }
+    .note h3{
+      margin: 0 0 10px;
+      font-family: var(--serif);
+      font-size: 16px;
+    }
+    .note p{ margin:0; color:var(--muted); font-size:13px; line-height:1.75; }
+
+    /* Footer */
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align:center;
+      padding: 10px 0 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .heroMedia{ min-height: 300px; }
+      .heroTitle{ font-size: 36px; }
+      .card{ grid-column: span 12; }
+      .notes{ grid-template-columns: 1fr; }
+      .tRow{ grid-template-columns: 90px 1fr; }
+    }
+
+    /* Image sources note */
+    .smallNote{ font-size:12px; color:var(--muted); margin: 10px 2px 0; line-height:1.6; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="kicker">drive journal</div>
+        <div class="title">看海路 · 伊豆 </div>
+      </div>
+      <div class="chips" aria-label="trip tags">
+        <span class="chip">G老师</span>
+        <span class="chip">给大家</span>
+        <span class="chip">一个</span>
+        <span class="chip">兜底的方案</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="hero">
+      <div class="heroGrid">
+        <div class="heroMedia">
+          <!-- Replace with your own image URL(s) anytime -->
+          <img src="file:///C:/Users/29279/Desktop/assets/hero_izu_coast.jpg" alt="Izu coastline drive">
+        </div>
+        <div class="heroCopy">
+          <div>
+            <h1 class="heroTitle">A two-day drive journal</h1>
+            <p class="heroSubtitle">
+              春天的伊豆，不只是看风景。它是一条从城市出发，逐渐靠近自然、季节与火山仪式的海岸线。
+              从建筑、美术馆、樱花，到燃烧整座山的清晨——由艾师傅张师傅开车，带大家享受美好的两天一夜。
+            </p>
+          </div>
+          <div class="heroMeta">
+            <div class="metaItem">
+              <div class="label">start</div>
+              <div class="value">池袋 → 热海（MOA）→ 河津樱 </div>
+            </div>
+            <div class="metaItem">
+              <div class="label">finish</div>
+              <div class="value">东伊豆 → 热海方向 → 东京</div>
+            </div>
+            <div class="metaItem">
+              <div class="label">highlights</div>
+              <div class="value">海岸线 / 河津樱 / 山焼き</div>
+            </div>
+            <div class="metaItem">
+              <div class="label">pace</div>
+              <div class="value">拍照温泉｜美食桌游</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- DAY 1 -->
+    <section class="section" aria-label="day1">
+      <div class="sectionHeader">
+        <div>
+          <h2>DAY 1 · Culture → Coast → Spring</h2>
+          <p class="desc">池袋 → MOA美术馆 → 伊豆海洋公园 → 城ヶ崎海岸 → 河津樱 → 东伊豆住宿</p>
+        </div>
+        <div class="kicker">Saturday</div>
+      </div>
+
+      <div class="content">
+        <div class="cards">
+          <article class="card">
+            <div class="cardMedia"><img src="file:///C:/Users/29279/Desktop/assets/moa_museum.jpg" alt="MOA Museum of Art"></div>
+            <div class="cardBody">
+              <div class="kicker">MOA Museum of Art · Atami</div>
+              <h3 class="cardTitle">Architecture before the journey begins</h3>
+              <p class="lede">旅程的第一站不是海，而是建筑。长长的扶梯像过渡空间，把人从东京的节奏带进伊豆的海风。</p>
+              <div class="facts">
+                <span class="fact">建议停留 1–1.5h</span>
+                <span class="fact">看：隧道扶梯 / 主馆大厅 / 海景露台</span>
+                <span class="fact">出发建议：7:00</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardMedia"><img src="file:///C:/Users/29279/Desktop/assets/izu_oceanic_park.jpg" alt="Izu Oceanic Park"></div>
+            <div class="cardBody">
+              <div class="kicker">Izu Oceanic Park</div>
+              <h3 class="cardTitle">First contact with the Pacific</h3>
+              <p class="lede">不是沙滩，而是火山岩。沿木栈道走一圈，听浪声砸在礁石上，伊豆的第一眼海就到位了。</p>
+              <div class="facts">
+                <span class="fact">建议停留 40–60min</span>
+                <span class="fact">停车：官方停车场</span>
+                <span class="fact">玩法：不下海，走栈道看海</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardMedia"><img src="file:///C:/Users/29279/Desktop/assets/jogasaki_bridge.jpg" alt="Jogasaki Coast"></div>
+            <div class="cardBody">
+              <div class="kicker">Jogasaki Coast</div>
+              <h3 class="cardTitle">Walking on volcanic time</h3>
+              <p class="lede">吊桥悬在火山岩之间，风大但视野完全打开。建议只做“停车→吊桥→返回”的短线，性价比最高。</p>
+              <div class="facts">
+                <span class="fact">建议停留 45–60min</span>
+                <span class="fact">停车：门胁吊桥停车场</span>
+                <span class="fact">拍照：吊桥中段</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardMedia"><img src="file:///C:/Users/29279/Desktop/assets/kawazu_sakura.jpg" alt="Kawazu Sakura"></div>
+            <div class="cardBody">
+              <div class="kicker">Kawazu Sakura</div>
+              <h3 class="cardTitle">Spring arrives earlier here</h3>
+              <p class="lede">深粉色沿河道展开，不像一瞬的绽放，而是持续的存在。下午光线最柔，傍晚人也开始散。</p>
+              <div class="facts">
+                <span class="fact">最佳时间 14:30–17:00</span>
+                <span class="fact">走：丰泉桥～馆桥</span>
+                <span class="fact">停车：别硬进中心区</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card wide">
+            <div class="cardBody">
+              <div class="kicker">Day 1 timeline</div>
+              <h3 class="cardTitle">把节奏控住，你会觉得伊豆很松</h3>
+              <div class="timeline" role="list">
+                <div class="tRow" role="listitem">
+                  <div class="tTime">07:00</div>
+                  <div class="tText">池袋出发（越早越稳）。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">10:00</div>
+                  <div class="tText">MOA美术馆 1–1.5h：建筑轴线 + 海景露台。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">12:00</div>
+                  <div class="tText">伊豆海洋公园 40–60min：栈道 + 礁石海浪。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">13:30</div>
+                  <div class="tText">城ヶ崎海岸 45–60min：门胁吊桥往返短线。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">15:00</div>
+                  <div class="tText">河津樱：丰泉桥～馆桥慢走到 17:00 左右。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">18:30</div>
+                  <div class="tText">北上回东伊豆入住（伊豆高原/八幡野/富户/川奈）。</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DAY 2 -->
+    <section class="section" aria-label="day2">
+      <div class="sectionHeader">
+        <div>
+          <h2>DAY 2 · The ritual of the mountain</h2>
+          <p class="desc">东伊豆住宿 → 大室山烧山 → 伊豆仙人掌动物公园 → 热海方向 → 东京</p>
+        </div>
+        <div class="kicker">Sunday</div>
+      </div>
+
+      <div class="content">
+        <div class="cards">
+          <article class="card">
+            <div class="cardMedia"><img src="file:///C:/Users/29279/Desktop/assets/omuro_yamayaki.jpg" alt="Omuroyama Yamayaki"></div>
+            <div class="cardBody">
+              <div class="kicker">Omuroyama Yamayaki</div>
+              <h3 class="cardTitle">A mountain that burns once a year</h3>
+              <p class="lede">九点左右点火，火线沿山体勾勒出完整圆锥。远一点看，烟线和轮廓更震撼——像一种清晨仪式。</p>
+              <div class="facts">
+                <span class="fact">07:30 前出发</span>
+                <span class="fact">时长约 30–40min</span>
+                <span class="fact">建议：远景观看（别贴山脚）</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardMedia"><img src="file:///C:/Users/29279/Desktop/assets/shaboten_zoo.jpg" alt="Izu Shaboten Zoo"></div>
+            <div class="cardBody">
+              <div class="kicker">Izu Shaboten Zoo</div>
+              <h3 class="cardTitle">A soft ending</h3>
+              <p class="lede">火之后，需要一点柔软。卡皮巴拉泡汤、温室仙人掌，刚好让节奏慢下来，作为收尾很舒服。</p>
+              <div class="facts">
+                <span class="fact">建议停留 1–1.5h</span>
+                <span class="fact">与大室山车程约 5min</span>
+                <span class="fact">玩法：卡皮巴拉 + 温室拍照</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card wide">
+            <div class="cardBody">
+              <div class="kicker">Day 2 timeline</div>
+              <h3 class="cardTitle">把“撤离时间”当成体验的一部分</h3>
+              <div class="timeline" role="list">
+                <div class="tRow" role="listitem">
+                  <div class="tTime">07:15</div>
+                  <div class="tText">旅馆出发 → 大室山周边（尽量一次停好车）。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">09:00</div>
+                  <div class="tText">烧山开始：远景看完整轮廓与烟线。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">10:30</div>
+                  <div class="tText">伊豆仙人掌动物公园：放松 1–1.5h。</div>
+                </div>
+                <div class="tRow" role="listitem">
+                  <div class="tTime">15:30</div>
+                  <div class="tText">建议离开伊豆（热海方向回东京更稳）。</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="notes">
+          <div class="note">
+            <h3>三句最重要的话</h3>
+            <p>1）Day 1 一定早出发。<br>2）河津樱下午看最好。<br>3）烧山远景比近景震撼。</p>
+          </div>
+          <div class="note">
+            <h3>Plan B（下雨 / 烧山取消）</h3>
+            <p>不影响行程成立：把烧山段改成伊豆高原慢逛 + 城ヶ崎加走一段，或提早返程。核心体验仍是“海岸线 + 春天 + 温泉”。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical notes -->
+    <section class="section" aria-label="practical">
+      <div class="sectionHeader">
+        <div>
+          <h2>Travel Notes · 实用信息</h2>
+          <p class="desc">把“堵车风险”和“拍照光线”当成路线的一部分</p>
+        </div>
+        <div class="kicker">notes</div>
+      </div>
+
+      <div class="content">
+        <div class="cards">
+          <article class="card wide">
+            <div class="cardBody">
+              <div class="kicker">Photography</div>
+              <h3 class="cardTitle">拍照重点速查</h3>
+              <div class="facts">
+                <span class="fact">MOA：广角拍轴线/露台</span>
+                <span class="fact">海洋公园：低机位拍礁石浪花</span>
+                <span class="fact">城ヶ崎：吊桥中段取景</span>
+                <span class="fact">河津樱：傍晚逆光更柔</span>
+                <span class="fact">烧山：远景拍轮廓+烟线</span>
+              </div>
+              <p class="lede" style="margin-top:10px;">
+                小建议：把“停留时间”当作拍照预算——每站不需要拍到完美，但要拍到“感觉”。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © Drive Journal · Izu Weekend (Magazine layout) — Replace images with your own for a true trip zine.
+    </footer>
+  </div>
+
+
+</body></html>
