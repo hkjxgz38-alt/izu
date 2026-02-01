@@ -25,6 +25,52 @@
       --sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       --max: 1120px;
     }
+/* =========================
+   Crew / Credits (square)
+   ========================= */
+
+.crewContent{
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  justify-items: center;
+}
+
+.crewPhoto{
+  width: 220px;
+  height: 220px;
+
+  margin: 0 auto;
+
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+
+  background: #fff;
+}
+
+.crewPhoto img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* 保留正方形，不裁剪 */
+  background: #fff;
+}
+
+.crewNames{
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--subtle);
+  text-align: center;
+}
+
+.crewNames strong{
+  color: var(--ink);
+  font-weight: 600;
+}
+
 
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
@@ -377,7 +423,7 @@
         </div>
         <div class="heroCopy">
           <div>
-            <h1 class="heroTitle">看海路 · 伊豆</h1>
+            <h1 class="heroTitle"> 去伊豆 ·看海咯</h1>
             <p class="heroSubtitle">
               春天的伊豆，不只是看风景。它是一条从城市出发，逐渐靠近自然、季节与火山仪式的海岸线。<br>
               DAY 1 让自然慢慢展开；DAY 2 先看烧山，再用一座美术馆把旅程收束。
@@ -639,6 +685,32 @@
         </aside>
       </div>
     </section>
+<section class="section crew" aria-label="crew">
+  <div class="sectionHeader">
+    <div class="sectionTitleWrap">
+      <div class="dayTag">CREDITS</div>
+      <h2>The people behind the weekend</h2>
+      <p class="desc">不是一个人完成的旅程</p>
+    </div>
+    <div class="kicker">crew</div>
+  </div>
+
+  <div class="crewContent">
+    <div class="crewPhoto">
+      <img src="./assets/crew.png" alt="Weekend drive crew">
+    </div>
+
+    <div class="crewNames">
+      <p><strong>G 老师</strong> · Route planning</p>
+      <p><strong>艾师傅</strong> · only one E drievr</p>
+      <p><strong>张师傅</strong> · Driver/Calm energy</p>
+<p><strong>发师傅</strong> · Rich Man</p>
+      <p><strong>Everyone</strong> · Weekend memories</p>
+    </div>
+  </div>
+</section>
+
+
 
 
     <footer>
