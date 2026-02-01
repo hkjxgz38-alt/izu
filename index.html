@@ -256,12 +256,21 @@
       line-height: 1.75;
     }
 
-    .timeNote{
-      margin-top: 4px;
-      font-size: 11px;
-      color: #7c7c7c;
-      letter-spacing: .10em;
+    .timeNote{$1}
+
+    .placeLink{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:12px;
+      color: var(--subtle);
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.015);
+      padding: 8px 10px;
+      border-radius: 999px;
+      width: fit-content;
     }
+    .placeLink:hover{ text-decoration: underline; }
 
     /* Sidebar timeline */
     .sidebar{
@@ -417,9 +426,9 @@
               <div class="caption">Stop 01</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">Lunch · Izu Kogen</div>
+              <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=Kenny%27s%20House%20cafe%20Izukogen%20Honten" target="_blank" rel="noopener">📍 Kenny's House cafe Izukogen Honten</a>
               <h3 class="cardTitle">Lunch as a pause</h3>
-              <p class="lede">进入伊豆后的第一顿饭。坐下来慢慢吃，是整趟旅程节奏被“放下来”的开始。Kenny's House cafe Izukogen Honten</p>
+              <p class="lede">进入伊豆后的第一顿饭。坐下来慢慢吃，是整趟旅程节奏被“放下来”的开始。</p>
               <p class="timeNote">12:00–13:00 · Lunch as a pause</p>
             </div>
           </article>
@@ -430,7 +439,7 @@
               <div class="caption">Stop 02</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">Izu Oceanic Park</div>
+              <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=Izu%20Oceanic%20Park%20(%E4%BC%8A%E8%B1%86%E6%B5%B7%E6%B4%8B%E5%85%AC%E5%9C%92)" target="_blank" rel="noopener">📍 伊豆海洋公园</a>
               <h3 class="cardTitle">First contact with the sea</h3>
               <p class="lede">木栈道、礁石与浪声。不需要久留，只需让海风改变你的呼吸方式。</p>
               <p class="timeNote">13:30–14:30 · First contact with the sea</p>
@@ -443,7 +452,7 @@
               <div class="caption">Stop 03</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">Jogasaki Coast</div>
+              <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=Jogasaki%20Coast%20Kadowaki%20Bridge%20(%E5%9F%8E%E3%83%B6%E5%B4%8E%E6%B5%B7%E5%B2%B8%20%E9%96%80%E8%84%87%E5%90%8A%E6%A9%8B)" target="_blank" rel="noopener">📍 城ヶ崎海岸（门胁吊桥）</a>
               <h3 class="cardTitle">Walking on volcanic time</h3>
               <p class="lede">吊桥悬在断崖之间，风很大但视野完全打开。建议只走短线，留体力给傍晚的樱花。</p>
               <p class="timeNote">15:00–16:00 · Walking on volcanic time</p>
@@ -456,7 +465,7 @@
               <div class="caption">Stop 04</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">Kawazu Sakura</div>
+              <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=Kawazu%20Sakura%20Festival%20(%E6%B2%B3%E6%B4%A5%E6%A1%9C%E3%81%BE%E3%81%A4%E3%82%8A%20%E6%B2%B3%E6%B4%A5%E5%B7%9D)" target="_blank" rel="noopener">📍 河津樱（河津川沿线）</a>
               <h3 class="cardTitle">Soft evening light</h3>
               <p class="lede">傍晚的光线最柔。深粉色沿河道展开，是第一天最温柔的收尾。</p>
               <p class="timeNote">16:30–17:30 · Soft evening light</p>
@@ -534,7 +543,7 @@
               <div class="caption">Stop 01</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">Omuroyama Yamayaki</div>
+              <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=Omuroyama%20(%E5%A4%A7%E5%AE%A4%E5%B1%B1)" target="_blank" rel="noopener">📍 大室山（烧山会场周边）</a>
               <h3 class="cardTitle">The ritual moment</h3>
               <p class="lede">早餐后提前出发，在仙人掌动物园一带远景观看烧山。远景比近景更完整：轮廓与烟线会一起出现。</p>
               <p class="timeNote">09:00 · The ritual moment</p>
@@ -547,7 +556,7 @@
               <div class="caption">Stop 02</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">Izu Shaboten Zoo</div>
+              <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=Izu%20Shaboten%20Zoo%20(%E4%BC%8A%E8%B1%86%E3%82%B7%E3%83%A3%E3%83%9C%E3%83%86%E3%83%B3%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92)" target="_blank" rel="noopener">📍 伊豆仙人掌动物公园</a>
               <h3 class="cardTitle">Slow down after fire</h3>
               <p class="lede">看完火之后，让节奏慢下来。卡皮巴拉温泉与温室空间，是情绪自然落地的缓冲段。</p>
               <p class="timeNote">10:30–11:30 · Slow down after fire</p>
@@ -560,9 +569,10 @@
               <div class="caption">Stop 03</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">Lunch · Izu Kogen</div>
+                 <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=Cafe%20East%20Hills%20Izu%20Kogen" target="_blank" rel="noopener">📍 Cafe East Hills</a>
               <h3 class="cardTitle">The last good meal</h3>
-              <p class="lede">回程前最重要的一顿饭。不赶时间、不将就，是让这趟伊豆在记忆中“好好结束”的关键。Cafe East Hills</p>
+              
+              <p class="lede">回程前最重要的一顿饭。不赶时间、不将就，是让这趟伊豆在记忆中“好好结束”的关键。</p>
               <p class="timeNote">12:30–13:30 · The last good meal</p>
             </div>
           </article>
@@ -573,7 +583,7 @@
               <div class="caption">Stop 04</div>
             </div>
             <div class="cardBody">
-              <div class="kicker">MOA Museum of Art · Atami</div>
+              <a class="placeLink" href="https://www.google.com/maps/search/?api=1&query=MOA%20Museum%20of%20Art%20(%EF%BC%AD%EF%BC%AF%EF%BC%A1%E7%BE%8E%E8%A1%93%E9%A4%A8)" target="_blank" rel="noopener">📍 MOA 美术馆</a>
               <h3 class="cardTitle">Architecture as an ending</h3>
               <p class="lede">把建筑留在最后。自动扶梯、光线与海景露台，为旅程留下安静而清晰的尾声。</p>
               <p class="timeNote">14:30–16:00 · Architecture as an ending</p>
